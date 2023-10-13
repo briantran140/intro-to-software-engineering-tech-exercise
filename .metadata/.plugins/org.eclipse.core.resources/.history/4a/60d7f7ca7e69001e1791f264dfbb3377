@@ -1,0 +1,78 @@
+
+/**
+ * @file SimpleFormInsert.java
+ */
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/InsertTran")
+public class InsertTran extends HttpServlet {
+   private static final long serialVersionUID = 1L;
+
+   public InsertTran() {
+      super();
+   }
+
+   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	   
+	   String firstName = request.getParameter("firstName");
+	   String lastName = request.getParameter("lastName");
+	   String phone = request.getParameter("phone");
+	   String email = request.getParameter("email");
+	   
+      Connection connection = null;
+      String insertSql = " INSERT INTO contactTableTran (id, FIRST_NAME, LAST_NAME, PHONE, EMAIL) values (default, ?, ?, ?, ?)";
+
+      try {
+         DBConnectionMurphy.getDBConnection();
+         connection = DBConnectionTran.connection;
+         PreparedStatement preparedStmt = connection.prepareStatement(insertSql);
+         preparedStmt.setString(1, year);
+         preparedStmt.setString(2, make);
+         preparedStmt.setString(3, model);
+         preparedStmt.setString(4, price);
+        
+         preparedStmt.execute();
+         connection.close();
+      } catch (Exception e) {
+         e.printStackTrace();
+      }
+
+      // Set response content type
+      response.setContentType("text/html");
+      PrintWriter out = response.getWriter();
+      String title = "Vehicle Added!";
+      String docType = "<!doctype html public \"-//w3c//dtd html 4.0 " + "transitional//en\">\n";
+      out.println(docType + //
+            "<html>\n" + //
+            "<head><title>" + title + "</title></head>\n" + //
+            "<body bgcolor=\"#f0f0f0\">\n" + //
+            "<h2 align=\"center\">" + title + "</h2>\n" + //
+            "<ul>\n" + //
+
+            "  <li><b>Year</b>: " + year + "\n" + //
+            "  <li><b>Make</b>: " + make + "\n" + //
+            "  <li><b>Model</b>: " + model + "\n" + //
+            "  <li><b>Price</b>: " + price + "\n" + //
+
+            "</ul>\n");
+
+      out.println("<a href=/techExercise-Tran/search_murphy.html>Search Inventory</a> <br>");
+      out.println("<a href=/techExercise-Tran/insert_murphy.html>Insert Vehicle</a> <br>");
+      out.println("<a href=/techExercise-Tran/delete_murphy.html>Remove Vehicle</a> <br>");
+      out.println("</body></html>");
+   }
+
+   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+      doGet(request, response);
+   }
+
+}
