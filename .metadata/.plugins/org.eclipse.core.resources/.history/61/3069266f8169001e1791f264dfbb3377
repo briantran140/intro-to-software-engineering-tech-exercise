@@ -60,7 +60,7 @@ public class SearchTran extends HttpServlet {
         	 String phone = rs.getString("PHONE").trim();
         	 String email = rs.getString("EMAIL").trim();
         	 
-        	 if (keyword.isEmpty() || firstName.toLowerCase().contains(keyword.toLowerCase())) {
+        	 if (keyword.isEmpty() || firstName.contains(keyword)) {
         		 out.println("ID: " + id + ", ");
         		 out.println("First Name: " + firstName + ", ");
         		 out.println("Last Name: " + lastName + ", ");

@@ -2,7 +2,7 @@
 <head>
 <style>
 header {
-    background-color:#107896;
+    background-color:black;
     color:white;
     text-align:center;
     padding:5px;	 
@@ -21,7 +21,7 @@ section {
     padding:10px;	 	 
 }
 footer {
-    background-color:#107896;
+    background-color:black;
     color:white;
     clear:both;
     text-align:center;
@@ -32,23 +32,24 @@ footer {
 
 <body>
 <header>
-	<h1> Delete Contact </h1>
+<h1> Create Contact </h1>
 </header>
 
 <nav>
 <a href="/techExercise-tran/search_tran.html">Search Contact</a> <br>
-<a href="/techExercise-tran/insert_tran.html">Insert Contact</a> <br>
+<a href="/techExercise-tran/delete_tran.html">Delete Contact</a> <br>
 </nav>
 
 <section>
-	<h1>Delete Contact</h1>
+	<h1>Search by First Name</h1>
 	
-	<form action="DeleteTran" method="POST">
+	<form action="SearchTran" method="POST">
+	
+		First Name <input type="text" name="keyword"> <br />
 		
-		Email: <input type="text" name="email"> <br/>
-		
-		<input type="submit" value="Submit" />
+		<input type="submit" value="Search" />
 	</form>
+
 </section>
 
 <footer>

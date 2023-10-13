@@ -11,7 +11,7 @@ nav {
     line-height:30px;
     background-color:#eeeeee;
     height:300px;
-    width:200px;
+    width:100px;
     float:left;
     padding:5px;	      
 }
@@ -21,7 +21,7 @@ section {
     padding:10px;	 	 
 }
 footer {
-    background-color:#107896;
+    background-color:black;
     color:white;
     clear:both;
     text-align:center;
@@ -32,23 +32,27 @@ footer {
 
 <body>
 <header>
-	<h1> Delete Contact </h1>
+<h1> Create Contact </h1>
 </header>
 
 <nav>
 <a href="/techExercise-tran/search_tran.html">Search Contact</a> <br>
-<a href="/techExercise-tran/insert_tran.html">Insert Contact</a> <br>
+<a href="/techExercise-tran/delete_tran.html">Delete Contact</a> <br>
 </nav>
 
 <section>
-	<h1>Delete Contact</h1>
+	<h1>Contact Information</h1>
 	
-	<form action="DeleteTran" method="POST">
-		
-		Email: <input type="text" name="email"> <br/>
+	<form action="InsertTran" method="POST">
+	
+		First Name: <input type="text" name="firstName"> <br />
+		Last Name: <input type="text" name="lastName"> <br />
+		Phone: <input type="text" name="phone"> <br />
+		Email: <input type="text" name="email"> <br />
 		
 		<input type="submit" value="Submit" />
 	</form>
+
 </section>
 
 <footer>

@@ -2,7 +2,7 @@
 <head>
 <style>
 header {
-    background-color:#107896;
+    background-color:black;
     color:white;
     text-align:center;
     padding:5px;	 
@@ -11,7 +11,7 @@ nav {
     line-height:30px;
     background-color:#eeeeee;
     height:300px;
-    width:200px;
+    width:100px;
     float:left;
     padding:5px;	      
 }
@@ -21,7 +21,7 @@ section {
     padding:10px;	 	 
 }
 footer {
-    background-color:#107896;
+    background-color:black;
     color:white;
     clear:both;
     text-align:center;
@@ -41,7 +41,7 @@ footer {
 </nav>
 
 <section>
-	<h1>Delete Contact</h1>
+	<h1>Email</h1>
 	
 	<form action="DeleteTran" method="POST">
 		

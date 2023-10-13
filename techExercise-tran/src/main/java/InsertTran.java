@@ -65,9 +65,9 @@ public class InsertTran extends HttpServlet {
 
             "</ul>\n");
 
-      out.println("<a href=/techExercise-Tran/search_tran.html>Search Contact</a> <br>");
-      out.println("<a href=/techExercise-Tran/insert_tran.html>Insert Contact</a> <br>");
-      out.println("<a href=/techExercise-Tran/delete_tran.html>Remove Contact</a> <br>");
+      out.println("<a href=/techExercise-tran/search_tran.html>Search Contact</a> <br>");
+      out.println("<a href=/techExercise-tran/insert_tran.html>Insert Contact</a> <br>");
+      out.println("<a href=/techExercise-tran/delete_tran.html>Delete Contact</a> <br>");
       out.println("</body></html>");
    }
 

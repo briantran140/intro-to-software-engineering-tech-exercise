@@ -36,7 +36,7 @@ footer {
 </header>
 
 <nav>
-<a href="/techExercise-tran/search_tran.html">Search Contact</a> <br>
+<a href="/techExercise-tran/delete_tran.html">Delete Contact</a> <br>
 <a href="/techExercise-tran/insert_tran.html">Insert Contact</a> <br>
 </nav>
 
