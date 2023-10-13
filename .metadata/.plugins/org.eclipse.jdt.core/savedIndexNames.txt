@@ -8,7 +8,6 @@ INDEX VERSION 1.134+C:\Workspace\techExercise\.metadata\.plugins\org.eclipse.jdt
 1923312224.index
 657467035.index
 1853087349.index
-1964114861.index
 64906870.index
 3562258421.index
 1069221482.index
